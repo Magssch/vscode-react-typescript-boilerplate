@@ -8,6 +8,10 @@ A VSCode extension containing snippets for `.tsx` files. Contains the following 
 
 Install from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Magssch.react-typescript-boilerplate)
 
+## How to use
+
+Create a new `.tsx` file and type `treact`. Choose your preferred boilerplate and press `enter`. The snippets contain multiple variables that can be customized in order to quickly setup a component. The first variable will always be the name of the component. Press `tab` to confirm the value of a variable and proceed to the next one.
+
 ## Demo
 
 ![Snippets demo](https://media.giphy.com/media/KmPcp4aZ0GSEgARLEt/giphy.gif)

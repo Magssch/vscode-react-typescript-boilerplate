@@ -4,6 +4,12 @@ All notable changes to the "react-typescript-boilerplate" extension will be docu
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## 0.0.4
+
+- Change stateless and prop snippet to respect user's tab/space preferences
+- Add logo, metadata, better readme and demo gif
+
+## 0.0.0
 
 - Initial release
+- Initial selection of three snippets from personal preference
