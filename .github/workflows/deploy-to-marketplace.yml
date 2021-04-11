@@ -1,2 +1,16 @@
-- name: GitHub Action for vsce
-  uses: lannonbr/vsce-action@2.0.0
+on:
+  push:
+    branches:
+      - master
+name: Deploy code to VS Marketplace
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm install
+      - uses: lannonbr/vsce-action@master
+        with:
+          args: "publish -p $VSCE_TOKEN"
+        env:
+          VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
