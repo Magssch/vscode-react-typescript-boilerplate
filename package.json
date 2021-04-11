@@ -1,0 +1,20 @@
+{
+    "name": "react-typescript-boilerplate",
+    "displayName": "React TypeScript boilerplate",
+    "description": "Snippets for generating boilerplate when developing React with TypeScript",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.55.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "typescriptreact",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
