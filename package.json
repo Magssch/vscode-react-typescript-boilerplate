@@ -4,9 +4,16 @@
   "author": {
     "name": "Magnus Schjølberg"
   },
+  "keywords": [
+    "typescript",
+    "react",
+    "typescriptreact",
+    "functional component",
+    "snippet"
+  ],
   "displayName": "React TypeScript boilerplate",
   "description": "Snippets for generating boilerplate when developing React with TypeScript",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.55.0"
   },
@@ -24,5 +31,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Magssch/vscode-react-typescript-boilerplate"
-  }
+  },
+  "icon": "images/icon.png"
 }
