@@ -10,4 +10,4 @@ Install from [Visual Studio Marketplace](https://marketplace.visualstudio.com/it
 
 ## Demo
 
-![Snippets demo](https://media.giphy.com/media/r4mIAXkrSmInnnGRSA/giphy.gif)
+![Snippets demo](https://media.giphy.com/media/KmPcp4aZ0GSEgARLEt/giphy.gif)
