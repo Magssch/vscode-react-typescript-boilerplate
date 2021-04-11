@@ -14,4 +14,4 @@ Create a new `.tsx` file and type `treact`. Choose your preferred boilerplate an
 
 ## Demo
 
-![Snippets demo](https://media.giphy.com/media/KmPcp4aZ0GSEgARLEt/giphy.gif)
+![Snippets demo](https://github.com/Magssch/vscode-react-typescript-boilerplate/blob/d3a27139d88c0645935ef770512eccfc252c1abb/images/demo.gif)
