@@ -1,0 +1,76 @@
+{
+  "Typescript React Functional Component": {
+    "prefix": "treact",
+    "body": [
+      "import React from 'react';",
+      "",
+      "const ${1:App} = () => {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t${2:}",
+      "\t\t</>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1:App};"
+    ],
+    "description": "Create a stateless Typescript React Functional Component"
+  },
+
+  "Typescript React Functional Component with props and interface": {
+    "prefix": "treactprops",
+    "body": [
+      "import React from 'react';",
+      "",
+      "interface ${1:App}Props {",
+      "\t${2:}: ${3:};",
+      "}",
+      "",
+      "const ${1:App}: React.FC<${1:App}Props> = ({ ${2:} }) => {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t${4:}",
+      "\t\t</>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1:App};"
+    ],
+    "description": "Create a Typescript React Functional Component with props and interface"
+  },
+
+  "Typescript React Functional Component with useState and useEffect": {
+    "prefix": "treactstate",
+    "body": [
+      "import React, { useState, useEffect } from 'react';",
+      "",
+      "interface ${1:App}Props {",
+      "\t${2:}: ${3:string};",
+      "}",
+      "",
+      "const ${1:App}: React.FC<${1:App}Props> = ({ ${2:} }) => {",
+      "\tconst [$4, set${4/(.*)/${1:/capitalize}/}] = useState<${3:string}>(${5:${2:}});",
+      "\tuseEffect(() => {",
+      "\t\t${6:set${4/(.*)/${1:/capitalize}/}(${2:});}",
+      "\t}, [${7:${2:}}]);",
+      "",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t${8:}",
+      "\t\t</>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1:App};"
+    ],
+    "description": "Create a Typescript React Functional Component with props, interface and a derived state (imports useEffect and useState)"
+  },
+
+  "Typescript React useState hook": {
+    "prefix": "tstate",
+    "body": [
+      "const [$1, set${1/(.*)/${1:/capitalize}/}] = useState<${2:string}>(${3:\"\"});"
+    ],
+    "description": "Create a useState hook with explicit type."
+  }
+}

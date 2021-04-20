@@ -24,7 +24,15 @@
     "snippets": [
       {
         "language": "typescriptreact",
-        "path": "./snippets/snippets.code-snippets"
+        "path": "./snippets/typescript.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/javascript.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript.code-snippets"
       }
     ]
   },
