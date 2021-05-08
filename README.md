@@ -18,10 +18,103 @@ This extension also includes slightly modified versions of these snippets, witho
 
 Install from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Magssch.react-typescript-boilerplate)
 
+## Demo
+
+![Snippets demo](https://media.giphy.com/media/QSFoVWNfXlEk2SL16S/giphy.gif)
+
 ## How to use
 
 Create a new `.tsx` file and type `treact`. Choose your preferred boilerplate and press `enter`. The snippets contain multiple variables that can be customized in order to quickly setup a component. The first variable will always be the name of the component. Press `tab` to confirm the value of a variable and proceed to the next one.
 
-## Demo
+## Snippet code expansions
 
-![Snippets demo](https://media.giphy.com/media/QSFoVWNfXlEk2SL16S/giphy.gif)
+#### treact
+
+```
+import React from 'react';
+
+const {Name} = () => {
+    return (
+        <>
+            {Body}
+        </>
+    );
+};
+
+export default {Name};
+```
+
+#### treactprops
+
+```
+import React from 'react';
+
+interface {Name}Props {
+    {Param}: {ParamType};
+}
+
+const {Name}: React.FC<{Name}Props> = ({ {Param} }) => {
+    return (
+        <>
+            {Body}
+        </>
+    );
+};
+
+export default {Name};
+```
+
+#### treactstate
+
+```
+import React, { useState, useEffect } from 'react';
+
+interface {Name}Props {
+    {Param}: {ParamType};
+}
+
+const {Name}: React.FC<{Name}Props> = ({ {Param} }) => {
+    const [{Attribute}, set{Attribute}] = useState<{ParamType}>({DefaultVal});
+    useEffect(() => {
+        set{Attribute}({Param});
+    }, [{Param}]);
+
+    return (
+        <>
+            {Body}
+        </>
+    );
+};
+
+export default {Name};
+```
+
+#### tstate
+
+```
+const [{Attribute}, set{Attribute}] = useState<{ParamType}>({DefaultVal});
+```
+
+#### teffect
+
+```
+useEffect(() => {
+    {Body}
+}, [{Param}]);
+```
+
+#### tstyled
+
+```
+const {ElementName} = styled.{ElementName}`
+    {Body}
+`;
+```
+
+#### tstyledcomp
+
+```
+const Styled{ComponentName} = styled({ComponentName})`
+    {Body}
+`;
+```

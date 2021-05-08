@@ -13,7 +13,7 @@
   ],
   "displayName": "React TypeScript boilerplate",
   "description": "Snippets for generating boilerplate when developing React with TypeScript",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "engines": {
     "vscode": "^1.55.0"
   },

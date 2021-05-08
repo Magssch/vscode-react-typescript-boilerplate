@@ -2,6 +2,10 @@
 
 All notable changes to the "react-typescript-boilerplate" extension will be documented in this file.
 
+## 0.0.8
+
+- Minor bugfix
+
 ## 0.0.7
 
 - Add `useEffect` hook snippet

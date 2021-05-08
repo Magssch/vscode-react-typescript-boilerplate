@@ -93,7 +93,7 @@
   "Styled Components styled component wrapper": {
     "prefix": "tstyledcomp",
     "body": [
-      "const Styled${1/(.*)/${1:/capitalize}/} = styled.$1`",
+      "const Styled${1/(.*)/${1:/capitalize}/} = styled($1)`",
       "\t$2",
       "`;"
     ],
