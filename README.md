@@ -1,11 +1,18 @@
 # React TypeScript boilerplate
 
-A VSCode extension containing snippets with for `.tsx` files. Contains the following snippets for creating boilerplate code for React with TypeScript:
+A VSCode extension containing snippets for `.tsx` files. This extension is meant to be a non-intrusive way to accelerate frontend development in TypeScript, while maintaining explicit type definitions and best-practices for self-documenting TypeScript code.
+
+The extension contains the following snippets for creating boilerplate code for React with TypeScript:
 
 - `treact`: Stateless React Functional Component with no props
 - `treactprops`: Stateless React Functional Component with props and interface
 - `treactstate`: React Functional Component with props and interface, in addition to a derived state using useState and useEffect hooks
 - `tstate`: React useState hook
+- `teffect`: React useEffect hook
+- `tstyled`: Styled Components JSX element
+- `tstyledcomp`: Styled Components wrapper for components (Material-UI etc.)
+
+All snippets start with `t`, both in JavaScript and TypeScript for consistency, and in order for the snippets to not collide with other IntelliSense suggestions.
 
 This extension also includes slightly modified versions of these snippets, without TypeScript constructs, for both `.js` and `.jsx` files.
 

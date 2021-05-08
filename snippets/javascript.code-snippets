@@ -64,5 +64,31 @@
       "const [$1, set${1/(.*)/${1:/capitalize}/}] = useState(${2:\"\"});"
     ],
     "description": "Create a useState hook with explicit type."
+  },
+
+  "Typescript React useEffect hook": {
+    "prefix": "teffect",
+    "body": ["useEffect(() => {", "\t$1", "}, [$2]);"],
+    "description": "Create a useEffect hook"
+  },
+
+  "Styled Components element": {
+    "prefix": "tstyled",
+    "body": [
+      "const ${2:${1/(.*)/${1:/capitalize}/}} = styled.$1`",
+      "\t$3",
+      "`;"
+    ],
+    "description": "Create a Styled Components JSX element"
+  },
+
+  "Styled Components styled component wrapper": {
+    "prefix": "tstyledcomp",
+    "body": [
+      "const Styled${1/(.*)/${1:/capitalize}/} = styled.$1`",
+      "\t$2",
+      "`;"
+    ],
+    "description": "Create a component wrapper with Styled Components"
   }
 }

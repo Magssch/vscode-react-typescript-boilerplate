@@ -2,7 +2,10 @@
 
 All notable changes to the "react-typescript-boilerplate" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## 0.0.7
+
+- Add `useEffect` hook snippet
+- Add snippets for Styled Components JSX elements
 
 ## 0.0.6
 
