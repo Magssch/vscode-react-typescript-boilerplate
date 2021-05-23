@@ -86,7 +86,7 @@
       "",
       "export default ${1/(.*)/${1:/capitalize}/}Provider;"
     ],
-    "description": "Create a React Context with memoized state and a Provider Component"
+    "description": "Create a React Context with memoized state and a Provider component"
   },
 
   "React useState hook": {

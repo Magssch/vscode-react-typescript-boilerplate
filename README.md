@@ -7,6 +7,7 @@ The extension contains the following snippets for creating boilerplate code for 
 - `treact`: Stateless React Functional Component with no props
 - `treactprops`: Stateless React Functional Component with props and interface
 - `treactstate`: React Functional Component with props and interface, in addition to a derived state using useState and useEffect hooks
+- `tcontext`: React Context with memoized state and Provider component
 - `tstate`: React useState hook
 - `teffect`: React useEffect hook
 - `tstyled`: Styled Components JSX element
@@ -87,6 +88,40 @@ const {Name}: React.FC<{Name}Props> = ({ {Param} }) => {
 };
 
 export default {Name};
+```
+
+#### tcontext
+
+```
+import React, { createContext, useState, useMemo } from 'react';
+
+interface {Name}ContextType {
+  {Name}: {ValueType};
+  set{Name}: (value: {ValueType}) => void;
+}
+
+export const {Name}Context = createContext<{Name}ContextType>({
+  {Name}: {DefaultValue},
+  set{Name}: () => {},
+});
+
+const {Name}Provider: React.FC = ({ children }) => {
+  const [{Name}, set{Name}] = useState<{ValueType}>({DefaultValue});
+  const memoizedValue = useMemo(() => ({ {Name}, set{Name} }), [{Name}]);
+
+  return (
+    <{Name}Context.Provider
+      value={{
+        {Name}: memoizedValue.{Name},
+        set{Name}: memoizedValue.set{Name},
+      }}
+    >
+      {children}
+    </{Name}Context.Provider>
+  );
+};
+
+export default {Name}Provider;
 ```
 
 #### tstate

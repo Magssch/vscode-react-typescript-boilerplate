@@ -2,7 +2,7 @@
 
 All notable changes to the "react-typescript-boilerplate" extension will be documented in this file.
 
-## 0.1.0
+## 0.1.1
 
 - Add memoized React Context with Provider snippet for JS/TS
 
