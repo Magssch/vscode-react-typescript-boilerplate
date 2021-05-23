@@ -58,6 +58,37 @@
     "description": "Create a Typescript React Functional Component with props, interface and a derived state (imports useEffect and useState)"
   },
 
+  "React memoized Context with Provider component": {
+    "prefix": "tcontext",
+    "body": [
+      "import React, { createContext, useState, useMemo } from 'react';",
+      "",
+      "export const ${1/(.*)/${1:/capitalize}/}Context = createContext({",
+      "\t${1:}: ${2:''},",
+      "\tset${1/(.*)/${1:/capitalize}/}: () => {},",
+      "});",
+      "",
+      "const ${1/(.*)/${1:/capitalize}/}Provider = ({ children }) => {",
+      "\tconst [${1:}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:''});",
+      "\tconst memoizedValue = useMemo(() => ({ ${1:}, set${1/(.*)/${1:/capitalize}/} }), [${1:}]);",
+      "",
+      "\treturn (",
+      "\t\t<${1/(.*)/${1:/capitalize}/}Context.Provider",
+      "\t\t\tvalue={{",
+      "\t\t\t\t${1:}: memoizedValue.${1:},",
+      "\t\t\t\tset${1/(.*)/${1:/capitalize}/}: memoizedValue.set${1/(.*)/${1:/capitalize}/},",
+      "\t\t\t}}",
+      "\t\t>",
+      "\t\t\t{children}",
+      "\t\t</${1/(.*)/${1:/capitalize}/}Context.Provider>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1/(.*)/${1:/capitalize}/}Provider;"
+    ],
+    "description": "Create a React Context with memoized state and a Provider Component"
+  },
+
   "React useState hook": {
     "prefix": "tstate",
     "body": [
