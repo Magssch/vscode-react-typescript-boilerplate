@@ -105,7 +105,7 @@
   "Typescript React useState hook": {
     "prefix": "tstate",
     "body": [
-      "const [$1, set${1/(.*)/${1:/capitalize}/}] = useState<${2:string}>(${3:\"\"});"
+      "const [$1, set${1/(.*)/${1:/capitalize}/}] = useState<${2:string}>(${3:''});"
     ],
     "description": "Create a useState hook with explicit type."
   },
