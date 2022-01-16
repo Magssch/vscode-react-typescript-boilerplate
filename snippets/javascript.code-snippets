@@ -58,7 +58,7 @@
       "export default ${1:App};",
       "",
     ],
-    "description": "Create a Typescript React Functional Component with props, interface and a derived state (imports useEffect and useState)"
+    "description": "Create a React Functional Component with props, interface and a derived state (imports useEffect and useState)"
   },
 
   "Memoized Context with Provider component": {
