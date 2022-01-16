@@ -5,11 +5,15 @@ A VSCode extension containing snippets for modern React development in TypeScrip
 The extension contains the following snippets for creating boilerplate code for React with TypeScript:
 
 - `treact`: Stateless React Functional Component with no props
-- `treactprops`: Stateless React Functional Component with props and interface
-- `treactstate`: React Functional Component with props and interface, in addition to a derived state using useState and useEffect hooks
-- `tcontext`: React Context with memoized state and Provider component
+- `treactprops`: Stateless React Functional Component with props (interface)
+- `treactprops type`: Stateless React Functional Component with props (type)
+- `treactstate`: React Functional Component with props (interface), in addition to a derived state using useState and useEffect hooks
+- `treactstate type`: React Functional Component with props (type), in addition to a derived state using useState and useEffect hooks
 - `tstate`: React useState hook
 - `teffect`: React useEffect hook
+- `timport`: Import React, useState and useEffect
+- `tcontext`: React Context with memoized state and Provider component
+- `tcontext type`: React Context with memoized state and Provider component (type instead of interface)
 - `tstyled`: Styled Components JSX element
 - `tstyledcomp`: Styled Components wrapper for components (Material-UI etc.)
 
