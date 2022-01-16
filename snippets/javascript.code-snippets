@@ -12,17 +12,18 @@
       "\t);",
       "};",
       "",
-      "export default ${1:App};"
+      "export default ${1:App};",
+      "",
     ],
     "description": "Create a stateless React Functional Component"
   },
 
-  "React Functional Component with props": {
+  "React FC with props": {
     "prefix": "treactprops",
     "body": [
       "import React from 'react';",
       "",
-      "const ${1:App} = ({ ${2:} }) => {",
+      "const ${1:App} = ({ ${2} }) => {",
       "\treturn (",
       "\t\t<>",
       "\t\t\t${3:}",
@@ -30,21 +31,22 @@
       "\t);",
       "};",
       "",
-      "export default ${1:App};"
+      "export default ${1:App};",
+      "",
     ],
     "description": "Create a React Functional Component with props and interface"
   },
 
-  "Typescript React Functional Component with useState and useEffect": {
+  "React FC with props and derived state": {
     "prefix": "treactstate",
     "body": [
       "import React, { useState, useEffect } from 'react';",
       "",
-      "const ${1:App} = ({ ${2:} }) => {",
-      "\tconst [$3, set${3/(.*)/${1:/capitalize}/}] = useState(${4:${2:}});",
+      "const ${1:App} = ({ ${2} }) => {",
+      "\tconst [$3, set${3/(.*)/${1:/capitalize}/}] = useState(${4:${2}});",
       "\tuseEffect(() => {",
-      "\t\t${5:set${3/(.*)/${1:/capitalize}/}(${2:});}",
-      "\t}, [${6:${2:}}]);",
+      "\t\t${5:set${3/(.*)/${1:/capitalize}/}(${2});}",
+      "\t}, [${6:${2}}]);",
       "",
       "\treturn (",
       "\t\t<>",
@@ -53,12 +55,13 @@
       "\t);",
       "};",
       "",
-      "export default ${1:App};"
+      "export default ${1:App};",
+      "",
     ],
     "description": "Create a Typescript React Functional Component with props, interface and a derived state (imports useEffect and useState)"
   },
 
-  "React memoized Context with Provider component": {
+  "Memoized Context with Provider component": {
     "prefix": "tcontext",
     "body": [
       "import React, { createContext, useState, useMemo } from 'react';",
@@ -75,7 +78,7 @@
       "\treturn (",
       "\t\t<${1/(.*)/${1:/capitalize}/}Context.Provider",
       "\t\t\tvalue={{",
-      "\t\t\t\t${1:}: memoizedValue.${1:},",
+      "\t\t\t\t${1:}: memoizedValue.${1},",
       "\t\t\t\tset${1/(.*)/${1:/capitalize}/}: memoizedValue.set${1/(.*)/${1:/capitalize}/},",
       "\t\t\t}}",
       "\t\t>",
@@ -84,7 +87,8 @@
       "\t);",
       "};",
       "",
-      "export default ${1/(.*)/${1:/capitalize}/}Provider;"
+      "export default ${1/(.*)/${1:/capitalize}/}Provider;",
+      "",
     ],
     "description": "Create a React Context with memoized state and a Provider component"
   },
@@ -92,18 +96,18 @@
   "React useState hook": {
     "prefix": "tstate",
     "body": [
-      "const [$1, set${1/(.*)/${1:/capitalize}/}] = useState(${2:''});"
+      "const [$1, set${1/(.*)/${1:/capitalize}/}] = useState$0(${2:''});"
     ],
     "description": "Create a useState hook with explicit type."
   },
 
   "Typescript React useEffect hook": {
     "prefix": "teffect",
-    "body": ["useEffect(() => {", "\t$1", "}, [$2]);"],
+    "body": ["useEffect$0(() => {", "\t$1", "}, [$2]);"],
     "description": "Create a useEffect hook"
   },
 
-  "Styled Components element": {
+  "Styled Components HTML element": {
     "prefix": "tstyled",
     "body": [
       "const ${2:${1/(.*)/${1:/capitalize}/}} = styled.$1`",
@@ -113,7 +117,7 @@
     "description": "Create a Styled Components JSX element"
   },
 
-  "Styled Components styled component wrapper": {
+  "Styled Components component wrapper": {
     "prefix": "tstyledcomp",
     "body": [
       "const Styled${1/(.*)/${1:/capitalize}/} = styled($1)`",
@@ -121,5 +125,14 @@
       "`;"
     ],
     "description": "Create a component wrapper with Styled Components"
-  }
+  },
+
+  "Import React and the most common hooks": {
+    "prefix": "timport",
+    "body": [
+      "import React, { useState, useEffect } from 'react';",
+      ""
+    ],
+    "description": "Import React, useState and useEffect"
+  },
 }

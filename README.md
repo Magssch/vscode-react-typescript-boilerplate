@@ -1,6 +1,6 @@
 # React TypeScript boilerplate
 
-A VSCode extension containing snippets for `.tsx` files. This extension is meant to be a non-intrusive way to accelerate frontend development in TypeScript, while maintaining explicit type definitions and best-practices for self-documenting TypeScript code.
+A VSCode extension containing snippets for modern React development in TypeScript with functional components and hooks. This extension is meant to be a non-intrusive way to accelerate frontend development in TypeScript, while maintaining explicit type definitions and best-practices for self-documenting TypeScript code.
 
 The extension contains the following snippets for creating boilerplate code for React with TypeScript:
 
@@ -43,6 +43,7 @@ const {Name} = () => {
 };
 
 export default {Name};
+
 ```
 
 #### treactprops
@@ -63,6 +64,28 @@ const {Name}: React.FC<{Name}Props> = ({ {Param} }) => {
 };
 
 export default {Name};
+
+```
+
+#### treactprops type
+
+```
+import React from 'react';
+
+type {Name}Props {
+    {Param}: {ParamType};
+}
+
+const {Name}: React.FC<{Name}Props> = ({ {Param} }) => {
+    return (
+        <>
+            {Body}
+        </>
+    );
+};
+
+export default {Name};
+
 ```
 
 #### treactstate
@@ -75,7 +98,7 @@ interface {Name}Props {
 }
 
 const {Name}: React.FC<{Name}Props> = ({ {Param} }) => {
-    const [{Attribute}, set{Attribute}] = useState<{ParamType}>({DefaultVal});
+    const [{Attribute}, set{Attribute}] = useState<{ParamType}>({Param});
     useEffect(() => {
         set{Attribute}({Param});
     }, [{Param}]);
@@ -88,6 +111,54 @@ const {Name}: React.FC<{Name}Props> = ({ {Param} }) => {
 };
 
 export default {Name};
+
+```
+
+#### treactstate type
+
+```
+import React, { useState, useEffect } from 'react';
+
+type {Name}Props {
+    {Param}: {ParamType};
+}
+
+const {Name}: React.FC<{Name}Props> = ({ {Param} }) => {
+    const [{Attribute}, set{Attribute}] = useState<{ParamType}>({Param});
+    useEffect(() => {
+        set{Attribute}({Param});
+    }, [{Param}]);
+
+    return (
+        <>
+            {Body}
+        </>
+    );
+};
+
+export default {Name};
+
+```
+
+#### tstate
+
+```
+const [{Attribute}, set{Attribute}] = useState<{ParamType}>({DefaultVal});
+```
+
+#### teffect
+
+```
+useEffect(() => {
+    {Body}
+}, [{Param}]);
+```
+
+#### timport
+
+```
+import React, { useState, useEffect } from 'react';
+
 ```
 
 #### tcontext
@@ -122,20 +193,42 @@ const {Name}Provider: React.FC = ({ children }) => {
 };
 
 export default {Name}Provider;
-```
-
-#### tstate
 
 ```
-const [{Attribute}, set{Attribute}] = useState<{ParamType}>({DefaultVal});
-```
 
-#### teffect
+#### tcontext type
 
 ```
-useEffect(() => {
-    {Body}
-}, [{Param}]);
+import React, { createContext, useState, useMemo } from 'react';
+
+type {Name}ContextType {
+  {Name}: {ValueType};
+  set{Name}: (value: {ValueType}) => void;
+}
+
+export const {Name}Context = createContext<{Name}ContextType>({
+  {Name}: {DefaultValue},
+  set{Name}: () => {},
+});
+
+const {Name}Provider: React.FC = ({ children }) => {
+  const [{Name}, set{Name}] = useState<{ValueType}>({DefaultValue});
+  const memoizedValue = useMemo(() => ({ {Name}, set{Name} }), [{Name}]);
+
+  return (
+    <{Name}Context.Provider
+      value={{
+        {Name}: memoizedValue.{Name},
+        set{Name}: memoizedValue.set{Name},
+      }}
+    >
+      {children}
+    </{Name}Context.Provider>
+  );
+};
+
+export default {Name}Provider;
+
 ```
 
 #### tstyled
