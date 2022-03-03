@@ -2,6 +2,10 @@
 
 All notable changes to the "react-typescript-boilerplate" extension will be documented in this file.
 
+## 0.2.2
+
+- Fix syntax error and eslint warnings on `type` snippet variants
+
 ## 0.2.0
 
 - Add `timport` snippet for importing React, useState and useEffect

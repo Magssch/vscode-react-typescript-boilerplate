@@ -76,9 +76,9 @@ export default {Name};
 ```
 import React from 'react';
 
-type {Name}Props {
+type {Name}Props = {
     {Param}: {ParamType};
-}
+};
 
 const {Name}: React.FC<{Name}Props> = ({ {Param} }) => {
     return (
@@ -123,9 +123,9 @@ export default {Name};
 ```
 import React, { useState, useEffect } from 'react';
 
-type {Name}Props {
+type {Name}Props = {
     {Param}: {ParamType};
-}
+};
 
 const {Name}: React.FC<{Name}Props> = ({ {Param} }) => {
     const [{Attribute}, set{Attribute}] = useState<{ParamType}>({Param});
@@ -205,10 +205,10 @@ export default {Name}Provider;
 ```
 import React, { createContext, useState, useMemo } from 'react';
 
-type {Name}ContextType {
+type {Name}ContextType = {
   {Name}: {ValueType};
   set{Name}: (value: {ValueType}) => void;
-}
+};
 
 export const {Name}Context = createContext<{Name}ContextType>({
   {Name}: {DefaultValue},
